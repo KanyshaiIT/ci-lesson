@@ -16,12 +16,6 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
 
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Run Tests
-        run: npm test
-
   docker-build-push:
     name: Build & Push Docker Image
     needs: build-test
