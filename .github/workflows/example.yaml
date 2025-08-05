@@ -17,9 +17,11 @@ jobs:
       uses: actions/setup-node@v4
     # 3. Install dependencies
     - name: Install Dependencies
+      working-directory: ci-lesson
       run: npm install 
     # 4. Run Test
     - name: Run Tests
+      working-directory: ci-lesson
       run: npm test
 
 # Build and push Docker image to ECR
